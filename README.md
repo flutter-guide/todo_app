@@ -6,11 +6,15 @@ This is a todo application written in flutter. The project is from the Flutter G
 2. Dart Version: 3.1.4
 
 ## Installation
-1. Get packages. 
+### Get packages. 
 Run: ```flutter pub get```
-2. Setup Firebase
-3. Connect Firebase and Flutter
+### Setup Firebase
+1. Add Authentication
+2. Init Firestore
+### Connect Firebase with Flutter
+1. `dart pub global activate flutterfire_cli`
 
+2. `flutterfire configure`
 ## Fundamental decisions
 - Framework: `Flutter`
 - Database: `Firebase`

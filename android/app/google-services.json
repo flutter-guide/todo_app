@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "780253814382",
+    "project_id": "flutterguide-todo",
+    "storage_bucket": "flutterguide-todo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780253814382:android:72cad4cba902270d8f107f",
+        "android_client_info": {
+          "package_name": "com.flutterguide.todo_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiqLJwIyudsrHZLenCuFpVYkSJJqamtQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
