@@ -15,8 +15,8 @@ Run: ```flutter pub get```
 
 ### Setup Firebase
 
-1. Add Authentication
-2. Init Firestore
+1. Add Email Authentication
+2. Init Firestore Database
     3. Add ruleset ```rules_version = '2';
        service cloud.firestore {
        match /databases/{database}/documents {
