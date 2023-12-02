@@ -1,6 +1,6 @@
 # TODO-App
 
-This is a todo application written in flutter. The project is from the Flutter Guide Community.
+This is a todo application written in flutter. The project is from the Flutter Guide Community and aims for providing a learning and experimental space for developers of all skill levels.
 
 ## Info
 
