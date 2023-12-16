@@ -10,15 +10,15 @@ class TodoApi {
   }
 
   Future<bool> createTodo(Map<String, dynamic> todoMap) async {
-    try{
+    try {
       await FirebaseFirestore.instance
           .collection(FirebaseAuth.instance.currentUser!.uid)
           .doc()
           .set(
-        todoMap,
-      );
+            todoMap,
+          );
       return true;
-    }catch(e){
+    } catch (e) {
       return false;
     }
   }
@@ -36,5 +36,18 @@ class TodoApi {
       return false;
     });
     return res;
+  }
+
+  Future<bool> deleteTask(String id) async {
+    try {
+      await FirebaseFirestore.instance
+          .collection(FirebaseAuth.instance.currentUser!.uid)
+          .doc(id)
+          .delete();
+
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
 }
