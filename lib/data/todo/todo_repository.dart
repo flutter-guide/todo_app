@@ -16,6 +16,12 @@ class TodoRepository {
     return await todoApi.createTodo(todo.toMap());
   }
 
+  Future<bool> deleteTask(String id) async {
+    return todoApi.deleteTask(
+      id,
+    );
+  }
+
   Stream<List<Todo>> fetchTodos() {
     final source = todoApi.fetchTodos();
     return source.map(
