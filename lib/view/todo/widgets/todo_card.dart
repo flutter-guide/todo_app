@@ -14,22 +14,25 @@ class TodoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(
-          10,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 7.0),
+      child: Material(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            10,
+          ),
         ),
-      ),
-      elevation: 2.0,
-      child: ListTile(
-        title: Text(
-          todo.title,
-        ),
-        leading: IconButton(
-          onPressed: () => todoRepository.toggleDone(todo.id!),
-          icon: Icon(
-            todo.done ? Icons.check_circle : Icons.radio_button_unchecked,
-            color: todo.done ? Theme.of(context).primaryColor : null,
+        elevation: 2.0,
+        child: ListTile(
+          title: Text(
+            todo.title,
+          ),
+          leading: IconButton(
+            onPressed: () => todoRepository.toggleDone(todo.id!),
+            icon: Icon(
+              todo.done ? Icons.check_circle : Icons.radio_button_unchecked,
+              color: todo.done ? Theme.of(context).primaryColor : null,
+            ),
           ),
         ),
       ),
