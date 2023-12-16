@@ -1,5 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:todo_app/data/todo/todo_repository.dart';
+import 'package:todo_app/domain/firebase/datastore/todo_api.dart';
+import 'package:todo_app/domain/models/todo.dart';
 import 'package:todo_app/view/common/navigation/default_drawer.dart';
 import 'package:todo_app/view/todo/widgets/create_task_dialog.dart';
 
@@ -25,10 +28,7 @@ class HomeScreen extends StatelessWidget {
             );
             if (todoText != null) {
               if (todoText.isNotEmpty) {
-                await FirebaseFirestore.instance.collection("tasks").doc().set({
-                  "title": todoText,
-                  "done": false,
-                });
+                TodoRepository(TodoApi()).createTodo(Todo(id: "", title: todoText, done: false,),);
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text("Task created!"),

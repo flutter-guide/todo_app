@@ -26,7 +26,7 @@ class TodoCard extends StatelessWidget {
           todo.title,
         ),
         leading: IconButton(
-          onPressed: () => todoRepository.toggleDone(todo.id),
+          onPressed: () => todoRepository.toggleDone(todo.id!),
           icon: Icon(
             todo.done ? Icons.check_circle : Icons.radio_button_unchecked,
             color: todo.done ? Theme.of(context).primaryColor : null,

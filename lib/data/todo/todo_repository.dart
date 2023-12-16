@@ -12,6 +12,10 @@ class TodoRepository {
     );
   }
 
+  Future<bool> createTodo(Todo todo) async {
+    return await todoApi.createTodo(todo.toMap());
+  }
+
   Stream<List<Todo>> fetchTodos() {
     final source = todoApi.fetchTodos();
     return source.map(
