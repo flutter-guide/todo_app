@@ -1,12 +1,12 @@
 class Todo {
-  final String id;
+  final String? id;
   final String title;
   final bool done;
 
   Todo({
-    required this.id,
+    this.id,
     required this.title,
-    required this.done,
+    this.done = false,
   });
 
   Map<String, dynamic> toMap() {
